@@ -1,14 +1,20 @@
 /** @format */
 
 body {
-  background-color: cadetblue;
+  background: radial-gradient(
+    328px at 2.9% 15%,
+    rgb(191, 224, 251) 0%,
+    rgb(232, 233, 251) 25.8%,
+    rgb(252, 239, 250) 50.8%,
+    rgb(234, 251, 251) 77.6%,
+    rgb(240, 251, 244) 100.7%
+  );
   font-family: sans-serif;
 }
 .container {
   max-width: 600px;
-  border: black;
+  border: rgb(28, 11, 11);
   border-radius: 12px;
-  background-color: white;
   padding: 30px;
   margin: 30px auto;
   box-shadow: rgba(60, 198, 233, 0.678) 0px 48px 100px 0px;
@@ -36,12 +42,23 @@ small {
   font-size: 20px;
   vertical-align: middle;
 }
+
 .city {
   display: flex;
   margin: 20px 0;
   justify-content: space-between;
   padding: 20px 0;
   border-bottom: 1px dashed rgba(122, 150, 226, 0.685);
+}
+
+#cities {
+  display: block;
+  max-width: 100%;
+  margin: 10px 100px;
+  padding: 0px 20px;
+  border: black;
+  background-color: rgba(128, 223, 230, 0.383);
+  border-radius: 12px;
 }
 .city:last-child {
   border: none;

@@ -6,7 +6,7 @@ function updateTime() {
   let telAvivTimeElement = telAvivElement.querySelector(".time");
   let telAvivTime = moment().tz("Asia/Jerusalem");
 
-  telAvivDateElement.innerHTML = telAvivTime.format("MMMM Do YYYY");
+  telAvivDateElement.innerHTML = telAvivTime.format("MMMM Do, YYYY");
   telAvivTimeElement.innerHTML = telAvivTime.format("H:mm:ss");
 
   //Madrid
@@ -15,7 +15,7 @@ function updateTime() {
   let madridTimeElement = madridElement.querySelector(".time");
   let madridTime = moment().tz("Europe/Madrid");
 
-  madridDateElement.innerHTML = madridTime.format("MMMM Do YYYY");
+  madridDateElement.innerHTML = madridTime.format("MMMM Do, YYYY");
   madridTimeElement.innerHTML = madridTime.format("H:mm:ss");
 
   //New York
@@ -24,9 +24,32 @@ function updateTime() {
   let newYorkTimeElement = newYorkElement.querySelector(".time");
   let newYorkTime = moment().tz("America/New_York");
 
-  newYorkDateElement.innerHTML = newYorkTime.format("MMMM Do YYYY");
+  newYorkDateElement.innerHTML = newYorkTime.format("MMMM Do, YYYY");
   newYorkTimeElement.innerHTML = newYorkTime.format("H:mm:ss");
 }
-
+function updateCities(event) {
+  let citiesTimeZone = event.target.value;
+  let citiesName = citiesTimeZone.replace("_", " ").split("/")[1];
+  let citiesTime = moment().tz(citiesTimeZone);
+  let citiesElement = document.querySelector("#cities");
+  citiesElement.innerHTML = `
+    <div class="city">
+          <div>
+            <h2>${citiesName}</h2>
+            <div class="date">📅 ${citiesTime.format("MMMM Do, YYYY")}</div>
+          </div>
+          <div>
+            <div class="time">${citiesTime.format("H:mm:ss")}</div>
+          </div>
+        </div>
+    `;
+}
 updateTime();
 setInterval(updateTime, 1000);
+
+let citiesSelectElement = document.querySelector("#city-list");
+citiesSelectElement.addEventListener("change", updateCities);
+
+
+updateCities();
+setInterval(updateCities, 1000);
