@@ -29,6 +29,9 @@ function updateTime() {
 }
 function updateCities(event) {
   let citiesTimeZone = event.target.value;
+  if (citiesTimeZone === "current") {
+    citiesTimeZone = moment.tz.guess();
+  }
   let citiesName = citiesTimeZone.replace("_", " ").split("/")[1];
   let citiesTime = moment().tz(citiesTimeZone);
   let citiesElement = document.querySelector("#cities");

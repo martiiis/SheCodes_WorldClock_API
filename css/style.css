@@ -50,6 +50,13 @@ small {
   padding: 20px 0;
   border-bottom: 1px dashed rgba(122, 150, 226, 0.685);
 }
+.city-location {
+  display: block;
+  padding: 20px 0;
+  align-items: flex-end;
+  justify-content: space-between;
+  border: black;
+}
 
 #cities {
   display: block;
