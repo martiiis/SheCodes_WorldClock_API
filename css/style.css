@@ -1,3 +1,62 @@
+/** @format */
+
 body {
-    background-color: cadetblue;
+  background-color: cadetblue;
+  font-family: sans-serif;
+}
+.container {
+  max-width: 600px;
+  border: black;
+  border-radius: 12px;
+  background-color: white;
+  padding: 30px;
+  margin: 30px auto;
+  box-shadow: rgba(60, 198, 233, 0.678) 0px 48px 100px 0px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 45px;
+}
+
+h2 {
+  margin: 0 0 5px;
+  font-size: 30px;
+}
+
+select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+small {
+  font-size: 20px;
+  vertical-align: middle;
+}
+.city {
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px dashed rgba(122, 150, 226, 0.685);
+}
+.city:last-child {
+  border: none;
+}
+
+.date {
+  opacity: 0.8;
+}
+
+.time {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+footer {
+  margin: 12px;
+  text-align: center;
 }
