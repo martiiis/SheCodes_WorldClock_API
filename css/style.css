@@ -81,6 +81,57 @@ small {
 }
 
 footer {
-  margin: 12px;
+  margin: 50px 20px;
+}
+.footer {
+  margin: 10px;
+}
+.footer-email {
   text-align: center;
+  font-family: var(--primary-font-family);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.footer-info {
+  text-align: center;
+  font-family: var(--primary-font-family);
+  font-size: 12px;
+}
+
+.fa-github-square,
+.fa-id-card,
+.fa-linkedin {
+  font-size: 22px;
+  color: black;
+  opacity: 0.6;
+}
+
+.fa-github-square:hover,
+.fa-id-card:hover,
+.fa-linkedin:hover,
+.fa-envelope:hover {
+  color: rgb(115, 23, 165);
+  transition: 200ms ease-in-out;
+  opacity: 1;
+  text-decoration: overline;
+}
+.git-link {
+  text-decoration: none;
+  color: rgb(115, 23, 165);
+  font-weight: bold;
+  font-family: var(--primary-font-family);
+}
+
+.git-link:hover {
+  transition: 200ms ease-in-out;
+  color: var(--secondary-color);
+}
+
+.fab:hover,
+.fas:hover,
+.far:hover {
+  font-size: 34px;
+  transition: all 200ms ease-in-out;
+  color: rgb(49, 4, 73);
 }
