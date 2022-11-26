@@ -1,4 +1,16 @@
 /** @format */
+:root {
+  --branding-color: #d789d7;
+  --secondary-color: #9d65c9;
+  --branding-background: linear-gradient(
+    to right,
+    rgb(173, 83, 137),
+    rgb(60, 16, 83)
+  );
+  --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  --primary-font-family: "Baloo 2", cursive;
+  --secondary-font-family: "Delius Unicase", cursive;
+}
 
 body {
   background: radial-gradient(
@@ -9,38 +21,39 @@ body {
     rgb(234, 251, 251) 77.6%,
     rgb(240, 251, 244) 100.7%
   );
-  font-family: sans-serif;
-}
-.container {
-  max-width: 600px;
-  border: rgb(28, 11, 11);
-  border-radius: 12px;
-  padding: 30px;
-  margin: 30px auto;
-  box-shadow: rgba(60, 198, 233, 0.678) 0px 48px 100px 0px;
 }
 
 h1 {
   text-align: center;
-  font-size: 45px;
+  font-family: var(--secondary-font-family);
+  font-size: 55px;
+  padding: 20px 0;
 }
 
 h2 {
   margin: 0 0 5px;
   font-size: 30px;
+  font-weight: bolder;
 }
-
 select {
   display: block;
   width: 100%;
-  padding: 10px;
+  font-size: 15px;
   border-radius: 5px;
-  font-size: 18px;
+  padding: 8px;
 }
 
-small {
-  font-size: 20px;
-  vertical-align: middle;
+.container {
+  display: block;
+  max-width: 600px;
+  margin: 30px auto;
+  border: rgb(28, 11, 11);
+  color: white;
+  background: var(--branding-background);
+  padding: 20px 40px;
+  box-shadow: var(--box-shadow);
+  border-radius: 12px;
+  font-family: var(--primary-font-family);
 }
 
 .city {
@@ -64,8 +77,16 @@ small {
   margin: 10px 100px;
   padding: 0px 20px;
   border: black;
-  background-color: rgba(128, 223, 230, 0.383);
+  background: radial-gradient(
+    328px at 2.9% 15%,
+    rgb(191, 224, 251) 0%,
+    rgb(232, 233, 251) 25.8%,
+    rgb(252, 239, 250) 50.8%,
+    rgb(234, 251, 251) 77.6%,
+    rgb(240, 251, 244) 100.7%
+  );
   border-radius: 12px;
+  color: black;
 }
 .city:last-child {
   border: none;
@@ -77,9 +98,9 @@ small {
 
 .time {
   font-size: 36px;
-  font-weight: bold;
 }
 
+/*footer*/
 footer {
   margin: 50px 20px;
 }
@@ -87,6 +108,7 @@ footer {
   margin: 10px;
 }
 .footer-email {
+  display: block;
   text-align: center;
   font-family: var(--primary-font-family);
   font-size: 12px;
@@ -99,23 +121,6 @@ footer {
   font-size: 12px;
 }
 
-.fa-github-square,
-.fa-id-card,
-.fa-linkedin {
-  font-size: 22px;
-  color: black;
-  opacity: 0.6;
-}
-
-.fa-github-square:hover,
-.fa-id-card:hover,
-.fa-linkedin:hover,
-.fa-envelope:hover {
-  color: rgb(115, 23, 165);
-  transition: 200ms ease-in-out;
-  opacity: 1;
-  text-decoration: overline;
-}
 .git-link {
   text-decoration: none;
   color: rgb(115, 23, 165);
@@ -126,12 +131,4 @@ footer {
 .git-link:hover {
   transition: 200ms ease-in-out;
   color: var(--secondary-color);
-}
-
-.fab:hover,
-.fas:hover,
-.far:hover {
-  font-size: 34px;
-  transition: all 200ms ease-in-out;
-  color: rgb(49, 4, 73);
 }
